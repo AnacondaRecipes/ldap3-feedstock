@@ -21,14 +21,18 @@ requirements:
     - pip
     - python
     - setuptools
-    - pyasn1
+    - wheel
   run:
     - python
-    - pyasn1 >=0.1.8
+    - pyasn1 >=0.4.6
 
 test:
   imports:
     - ldap3
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
   home: https://github.com/cannatag/ldap3
